@@ -9,7 +9,7 @@ Much of this work is based on Jzy3d, a Java API from [github.com/martin-pernolle
 This is the toolkit by itself. It is based on OpenTK for OpenGL integration in C#.
 
 ## nzy3d-tests
-This is where all unit/integration tests resides. Work In Progress, testers are welcome !
+This is where all unit/integration tests reside (work in progress).
 
 ## nzy3d-wpfDemo
 This is a demo of the use of the toolkit in a WPF application.

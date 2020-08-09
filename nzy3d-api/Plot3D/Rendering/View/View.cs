@@ -598,7 +598,7 @@ namespace nzy3D.Plot3D.Rendering.View
 				GL.Disable(EnableCap.DepthTest);
 			}
 			// Blending
-			GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.OneMinusSrcAlpha);
+			GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
 			// on/off is handled by each viewport (camera or image)
 			// Activate transparency
 			if (_quality.AlphaActivated) {

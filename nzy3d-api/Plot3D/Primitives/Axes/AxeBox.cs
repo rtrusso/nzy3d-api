@@ -129,7 +129,7 @@ namespace nzy3D.Plot3D.Primitives.Axes
 				GL.Enable(EnableCap.PolygonOffsetFill);
 				GL.PolygonOffset(1, 1);
 				// handle stippling
-				drawCube(OpenTK.Graphics.RenderingMode.Render);
+				drawCube(RenderingMode.Render);
 				GL.Disable(EnableCap.PolygonOffsetFill);
 			}
 			// Edge part of quads making the surrounding box
@@ -137,7 +137,7 @@ namespace nzy3D.Plot3D.Primitives.Axes
 			GL.PolygonMode(MaterialFace.Back, PolygonMode.Line);
 			GL.Color4(gridcolor.r, gridcolor.g, gridcolor.b, gridcolor.a);
 			GL.LineWidth(1);
-			drawCube(OpenTK.Graphics.RenderingMode.Render);
+			drawCube(RenderingMode.Render);
 			// Draw grids on non hidden quads
 			GL.PolygonMode(MaterialFace.Back, PolygonMode.Line);
 			GL.Color4(gridcolor.r, gridcolor.g, gridcolor.b, gridcolor.a);
@@ -571,10 +571,10 @@ namespace nzy3D.Plot3D.Primitives.Axes
 		/// Each quad is indexed from 0.0f to 5.0f using glPassThrough,
 		/// and may be traced in feedback mode when mode=<see cref="OpenTK.Graphics.RenderingMode.Feedback"/>
 		/// </summary> 
-		public void drawCube(OpenTK.Graphics.RenderingMode mode)
+		public void drawCube(RenderingMode mode)
 		{
 			for (int q = 0; q <= 5; q++) {
-				if (mode == OpenTK.Graphics.RenderingMode.Feedback) {
+				if (mode == RenderingMode.Feedback) {
 					GL.PassThrough(q);
 				}
 				GL.Begin(BeginMode.Quads);

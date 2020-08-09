@@ -206,6 +206,11 @@ namespace nzy3D.Plot3D.Builder.Delaunay.Jdt
 
 		public bool circumcircle_contains(Point_dt p)
 		{
+			if (_halfplane)
+			{
+				return false;
+			}
+			
 			return _circum.Radius > _circum.Center.distance2(p);
 		}
 
